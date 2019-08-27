@@ -29,7 +29,7 @@ import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 
 /**
- * Test server for Kafka sink.
+ * Test client for Kafka sink.
  */
 public class KafkaPublisher {
 
@@ -111,13 +111,13 @@ public class KafkaPublisher {
 
         Event[] events = new Event[4];
         events[0] = new Event(System.currentTimeMillis(), new Object[]{"L2W1", "B1",
-                String.valueOf(System.currentTimeMillis()), 01212L, "Premium", "John2", "Steward", 20D, "MMOL"});
+                String.valueOf(System.currentTimeMillis()), 01212L, "Premium", "John", "Steward", 20D, "MMOL"});
         events[1] = new Event(System.currentTimeMillis(), new Object[]{"L2W1", "B1",
-                String.valueOf(System.currentTimeMillis()), 01212L, "Premium", "John2", "Steward", 25D, "MMOL"});
+                String.valueOf(System.currentTimeMillis()), 01212L, "Premium", "John", "Steward", 25D, "MMOL"});
         events[2] = new Event(System.currentTimeMillis(), new Object[]{"L2W1", "B1",
-                String.valueOf(System.currentTimeMillis()), 01212L, "Premium", "John2", "Steward", 30D, "MMOL"});
+                String.valueOf(System.currentTimeMillis()), 01212L, "Premium", "John", "Steward", 30D, "MMOL"});
         events[3] = new Event(System.currentTimeMillis(), new Object[]{"L2W1", "B1",
-                String.valueOf(System.currentTimeMillis()), 01212L, "Premium", "John2", "Steward", 32D, "MMOL"});
+                String.valueOf(System.currentTimeMillis()), 01212L, "Premium", "John", "Steward", 32D, "MMOL"});
         InputHandler streamHandler = siddhiAppRuntime.getInputHandler("GlucoseReadingStream");
 
         streamHandler.send(events);
