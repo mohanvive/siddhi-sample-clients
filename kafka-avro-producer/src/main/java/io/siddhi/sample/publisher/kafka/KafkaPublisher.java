@@ -47,17 +47,14 @@ public class KafkaPublisher {
         siddhiManager.setExtension("sink:kafka", KafkaSink.class);
         siddhiManager.setExtension("sinkMapper:avro", AvroSinkMapper.class);
 
-        String bootstrapServers = "";
-        String topic = "";
+        String bootstrapServers = "localhost:9092";
+        String topic = "glucose-readings";
 
         if (args != null && args.length == 1) {
             bootstrapServers = args[0];
         } else if (args != null && args.length == 2) {
             bootstrapServers = args[0];
             topic = args[1];
-        } else {
-            bootstrapServers = "localhost:9092";
-            topic = "glucose-readings";
         }
 
         SiddhiAppRuntime siddhiAppRuntime = siddhiManager.createSiddhiAppRuntime(
