@@ -29,6 +29,7 @@
 
     <modules>
         <module>kafka-avro-producer</module>
+        <module>tcp-producer</module>
     </modules>
 
     <dependencyManagement>
@@ -59,6 +60,16 @@
                 <artifactId>log4j</artifactId>
                 <version>${log4j.wso2.version}</version>
             </dependency>
+            <dependency>
+                <groupId>io.siddhi.extension.io.tcp</groupId>
+                <artifactId>siddhi-io-tcp</artifactId>
+                <version>${siddhi.io.tcp.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.siddhi.extension.map.binary</groupId>
+                <artifactId>siddhi-map-binary</artifactId>
+                <version>${siddhi.map.binary.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -67,7 +78,9 @@
         <testng.version>7.0.0</testng.version>
         <log4j.wso2.version>1.2.17.wso2v1</log4j.wso2.version>
         <siddhi.io.kafka.version>5.0.3</siddhi.io.kafka.version>
+        <siddhi.io.tcp.version>3.0.3</siddhi.io.tcp.version>
         <siddhi.map.avro.version>2.0.2</siddhi.map.avro.version>
+        <siddhi.map.binary.version>2.0.2</siddhi.map.binary.version>
     </properties>
 
     <repositories>
