@@ -81,6 +81,9 @@
         <siddhi.io.tcp.version>3.0.3</siddhi.io.tcp.version>
         <siddhi.map.avro.version>2.0.2</siddhi.map.avro.version>
         <siddhi.map.binary.version>2.0.2</siddhi.map.binary.version>
+
+        <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
+        <maven.assembly.plugin.version>3.1.1</maven.assembly.plugin.version>
     </properties>
 
     <repositories>
@@ -103,6 +106,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven.compiler.plugin.version}</version>
                     <configuration>
                         <source>1.8</source>
                         <target>1.8</target>
@@ -111,7 +115,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-assembly-plugin</artifactId>
-                    <version>3.1.1</version>
+                    <version>${maven.assembly.plugin.version}</version>
                 </plugin>
             </plugins>
         </pluginManagement>
