@@ -17,11 +17,10 @@
  *
  */
 
-package io.siddhi.distribution.sample.tcp.client.sample.publisher.tcp;
+package io.siddhi.sample.publisher.tcp;
 
 import io.siddhi.core.SiddhiAppRuntime;
 import io.siddhi.core.SiddhiManager;
-import io.siddhi.core.event.Event;
 import io.siddhi.core.stream.input.InputHandler;
 import io.siddhi.extension.io.tcp.sink.TCPSink;
 import io.siddhi.extension.map.binary.sinkmapper.BinarySinkMapper;

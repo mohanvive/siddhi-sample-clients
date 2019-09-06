@@ -48,7 +48,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>io.siddhi.sample.publisher.kafka.KafkaPublisher</mainClass>
+                            <mainClass>io.siddhi.sample.publisher.tcp.TCPPublisher</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
