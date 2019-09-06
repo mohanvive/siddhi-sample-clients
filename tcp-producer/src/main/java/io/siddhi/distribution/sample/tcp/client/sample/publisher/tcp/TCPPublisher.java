@@ -55,7 +55,7 @@ public class TCPPublisher {
 
         SiddhiAppRuntime siddhiAppRuntime = siddhiManager.createSiddhiAppRuntime(
                 "@App:name(\"TCP-Event-Publisher\")\n" +
-                        "@sink(type='tcp', url='tcp://localhost:9892/taxiRideRequests', @map(type='binary'))\n" +
+                        "@sink(type='tcp', url='tcp://localhost:9892/"+ context +"', @map(type='binary'))\n" +
                         "define stream TaxiRideEventStream(id long, time string, passengerId string, " +
                         "passengerName string, pickUpAddress string, pickUpZone string, \n" +
                         "dropOutAddress string, routingDetails string, expectedFare double, " +
